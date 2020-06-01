@@ -1,0 +1,439 @@
+データベースを使って、これまで作ってきたアンケートフォームをグレードアップしましょう。  
+ユーザーが入力した問い合わせの内容を、データベースに保存できるように改修していきます。
+
+## プログラムでデータベースにアクセスするルール
+プログラムでデータベースを扱う場合は、必ず次の3ステップを踏みます。
+これから何度も出てきますので、しっかり覚えておきましょう。
+
+### ▼ ステップ１：データベースに接続する
+まず最初に、使用するデータベースに接続します。次のように記述します。
+
+```php
+$dsn = 'mysql:dbname=phpkiso;host=localhost';
+$user = 'root';
+$password='';
+$dbh = new PDO($dsn, $user, $password);
+$dbh->query('SET NAMES utf8');
+```
+
+どのデータベースを使用するか記述した後、接続するためのユーザー名とパスワードを指定します。
+XAMPP環境ではユーザー名は「root」、パスワードは空になります。
+
+### ▼ ステップ２：SQL文を実行する
+データベースに接続できたら、SQL文を実行します。次のように記述します。
+
+```php
+$sql = 'ここにSQL文を書く';
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+```
+
+### ▼ ステップ３：データベースを切断する
+データベースの処理が終了したら、データベースを切断します。次のように記述します。
+
+```php
+$dbh = null;
+```
+
+データベースは、接続したら必ず切断することを忘れないでください。
+
+
+## アンケート自動保存機能の作成
+thanks.phpに、アンケート自動保存機能を追加します。  
+phpコードの上の方に、以下の処理を記述しましょう。
+
+1. データベースに接続する
+2. SQL文を実行する
+3. データベースを切断する
+
+```php
+<?php
+  $nickname = htmlspecialchars($_POST['nickname']);
+  $email = htmlspecialchars($_POST['email']);
+  $content = htmlspecialchars($_POST['content']);
+
+  // １．データベースに接続する
+  $dsn = 'mysql:dbname=phpkiso;host=localhost';
+  $user = 'root';
+  $password='';
+  $dbh = new PDO($dsn, $user, $password);
+  $dbh->query('SET NAMES utf8');
+
+  // ２．SQL文を実行する
+  $sql = '';
+  $stmt = $dbh->prepare($sql);
+  $stmt->execute();
+
+  // ３．データベースを切断する
+  $dbh = null;
+?>
+```
+
+SQL文は、phpMyAdminを使って作成しましょう。  
+今回はユーザーが入力した問い合わせ内容を登録したいので、INSERT文を使うことになります。
+
+```sql
+INSERT INTO `survey`(`nickname`, `email`, `content`) VALUES ("ニックネーム", "メールアドレス", "問い合わせ内容")
+```
+
+SQL文のニックネームには「$nickname」、メールアドレスには「$email」、問い合わせ内容には「$content」の変数の値を入れることになるので、文字を「.」でつないでSQL文と変数を連結しましょう。
+
+```php
+$sql = 'INSERT INTO `survey`(`nickname`, `email`, `content`) VALUES ("'. $nickname.'", "'.$email.'", "'.$content.'")';
+```
+
+ここまで書けたらthanks.phpを保存し、アンケートフォームを動かしてみましょう。  
+[http://localhost/phpkiso/index.html](http://localhost/phpkiso/index.html) にアクセスし、問い合わせ内容を入力してthanks.phpまで進めてください。  
+thanks.php画面でエラーが出ないことを確認できたら、phpMyAdminのsurveyテーブルを見てデータが登録されていることを確認してください。
+
+
+## アンケート一覧表示機能の作成
+アンケート自動保存機能が作成できたので、今度は登録されている内容の一覧を表示する機能を作成しましょう。
+
+<img src="http://hackers.nexseed.net/images/curriculum_images/anketo_5.png" alt="アンケートフォーム" style="width: 40%;">
+
+phpkisoフォルダの中に「view.php」ファイルを作成し、次のコードを記述します。
+
+```php
+<?php
+// １．データベースに接続する
+$dsn = 'mysql:dbname=phpkiso;host=localhost';
+$user = 'root';
+$password = '';
+$dbh = new PDO($dsn, $user, $password);
+$dbh->query('SET NAMES utf8');
+
+// ２．SQL文を実行する
+$sql = '';
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+
+// ３．データベースを切断する
+$dbh = null;
+?>
+```
+
+view.phpでは、アンケートの内容を全件表示したいので、実行するSQLは次のようになります。  
+phpMyAdminで作成して実行してみましょう。
+
+```sql
+SELECT * FROM `survey`
+```
+
+上記のSQLを、$sqlの値に設定します。
+
+```php
+$sql = 'SELECT * FROM `survey`';
+```
+
+ここまで書けたら、 [http://localhost/phpkiso/view.php](http://localhost/phpkiso/view.php)へアクセスしてみましょう。  
+画面には何も表示されていないと思います。  
+これは、実行したSQL文の結果を受け取って出力する処理を記述していないからです。  
+まずは、実行したSQLの結果を受け取る方法を見ていきましょう。
+
+SQLを実行した結果は、「$stmt」の中に入ってきます。
+ここからデータを取り出すには、次のように記述します。
+
+```php
+$rec = $stmt->fetch(PDO::FETCH_ASSOC);
+```
+
+fetch は、**データベースのテーブルのレコードを1行取り出して、次の行を取り出す準備をする**という機能です。
+**FETCH_ASSOC** は、取り出したレコードを連想配列（カラム名がキーになります）に変換してくれます。
+fetchを使いレコードを1件ずつ取り出し、FETCH_ASSOCを使って連想配列に変換することで、$rec変数の中に連想配列の形式でデータが入ってきます。
+ただfetch自体は1件取り出すのみの処理をおこなうので、ループ処理との組み合わせで使用することが多いです。何も行を取り出せなくなったとき（最後まで来て次の行がなくなったとき）falseを取得します。
+
+しかしこのままでは、1件分のレコードしか取り出すことができません。
+SQLの実行結果で複数のレコードが返ってくる場合は、while文を使ってレコードを1件1件取り出してあげる必要があります。次のように記述します。
+
+```php
+while (1) {
+  $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+  if ($rec == false) {
+    break;
+  }
+  echo $rec['code'] . '<br>';
+  echo $rec['nickname'] . '<br>';
+  echo $rec['email'] . '<br>';
+  echo $rec['content'] . '<br>';
+  echo '<hr>';
+}
+```
+
+while文の条件式には「1」を設定し、無限ループで回します。  
+fetchは、次のレコードがない場合は「false」を返しますので、全てのレコードを取得することができたらbreakを使ってループを抜けます。
+
+view.phpが次のようになっていることを確認し、[http://localhost/phpkiso/view.php](http://localhost/phpkiso/view.php)へアクセスして一覧表示が確認できたらOKです。
+
+```php
+<?php
+// １．データベースに接続する
+$dsn = 'mysql:dbname=phpkiso;host=localhost';
+$user = 'root';
+$password = '';
+$dbh = new PDO($dsn, $user, $password);
+$dbh->query('SET NAMES utf8');
+
+// ２．SQL文を実行する
+$sql = 'SELECT * FROM `survey`';
+// SQLを実行
+$stmt = $dbh->prepare($sql);
+$stmt->execute();
+
+while (1) {
+  $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+  if ($rec == false) {
+    break;
+  }
+  echo $rec['code'] . '<br>';
+  echo $rec['nickname'] . '<br>';
+  echo $rec['email'] . '<br>';
+  echo $rec['content'] . '<br>';
+  echo '<hr>';
+}
+
+// ３．データベースを切断する
+$dbh = null;
+?>
+```
+
+## アンケート検索機能の作成
+今度は、アンケートを検索できる機能を作成しましょう。  
+
+<img src="http://hackers.nexseed.net/images/curriculum_images/anketo_6.png" alt="アンケートフォーム" style="width: 40%;">
+
+phpkisoフォルダの中に「search.php」を作成し、次のコードを記述します。
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>検索ページ</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <form action="" method="post">
+    <p>検索したいcodeを入力してください。</p>
+    <input type="text" name="code">
+    <input type="submit" value="検索">
+  </form>
+</body>
+</html>
+```
+
+[http://localhost/phpkiso/search.php](http://localhost/phpkiso/search.php)へアクセスし、ページがきちんと表示されることを確認してください。
+
+まずは、データベース接続処理のため、htmlタグのformタグの下にphpタグを記述し、その中に次のように記述します。
+
+```php
+・・・
+<form action="" method="post">
+  <p>検索したいcodeを入力してください。</p>
+  <input type="text" name="code">
+  <input type="submit" value="検索">
+</form>
+<!-- ここからPHPコードを記述する -->
+<?php
+  // １．データベースに接続する
+  $dsn = 'mysql:dbname=phpkiso;host=localhost';
+  $user = 'root';
+  $password = '';
+  $dbh = new PDO($dsn, $user, $password);
+  $dbh->query('SET NAMES utf8');
+
+  // ２．SQL文を実行する
+  $sql = '';
+  // SQLを実行
+  $stmt = $dbh->prepare($sql);
+  $stmt->execute();
+
+  // ３．データベースを切断する
+  $dbh = null;
+?>
+
+</body>
+</html>
+```
+
+今回は、指定されたcodeのお問い合わせ内容を取得したいので、実行するSQLは次のようになります。phpMyAdminで実行してみましょう。
+
+```sql
+SELECT * FROM `survey` WHERE `code` = 1
+```
+
+$sqlに指定するSQLは、次のようになります。
+
+```php
+$sql = 'SELECT * FROM `survey` WHERE `code` = ' . $_POST['code'];
+```
+
+ユーザーが入力する検索フォームのname属性は「code」になっており、formのmethod属性が「post」になっているので、フォームデータの受け取りは「 `$_POST['code']` 」になります。  
+受け取った検索フォームデータを、SQL文と文字の連結で繋いでいます。
+
+ここまでできたら、一度[http://localhost/phpkiso/search.php](http://localhost/phpkiso/search.php)へアクセスしてみましょう。  
+この状態でsearch.phpを表示すると、 **Undefined index: code** のエラーが表示されると思います。  
+これは、初期表示時には `$_POST['code']` のデータが送られてこないため、codeの値が見当たらないというエラーです。  
+そのため、POSTでデータが送信された時のみSQLを実行するよう、次のように書き換えて再度search.phpを表示し、エラーが出なくなることを確認してください。
+
+```php
+<?php
+  // １．データベースに接続する
+  $dsn = 'mysql:dbname=phpkiso;host=localhost';
+  $user = 'root';
+  $password = '';
+  $dbh = new PDO($dsn, $user, $password);
+  $dbh->query('SET NAMES utf8');
+
+  // POSTでデータが送信された時のみSQLを実行する
+  if (!empty($_POST)) {
+    // ２．SQL文を実行する
+    $sql = 'SELECT * FROM `survey` WHERE `code` = ' . $_POST['code'];
+    // SQLを実行
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+  }
+
+  // ３．データベースを切断する
+  $dbh = null;
+?>
+```
+
+次に、SQLで実行した結果を取得します。  
+search.phpのSQL実行後に、データを取得する処理を記述しましょう。
+
+```php
+<?php
+  // １．データベースに接続する
+  $dsn = 'mysql:dbname=phpkiso;host=localhost';
+  $user = 'root';
+  $password = '';
+  $dbh = new PDO($dsn, $user, $password);
+  $dbh->query('SET NAMES utf8');
+
+  // POSTでデータが送信された時のみSQLを実行する
+  if (!empty($_POST)) {
+    // ２．SQL文を実行する
+    $sql = 'SELECT * FROM `survey` WHERE `code` = ' . $_POST['code'];
+    // SQLを実行
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+
+    // データを取得する
+    while (1) {
+      $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+      if ($rec == false) {
+        break;
+      }
+      echo $rec['code'] . '<br>';
+      echo $rec['nickname'] . '<br>';
+      echo $rec['email'] . '<br>';
+      echo $rec['content'] . '<br>';
+      echo '<hr>';
+    }
+  }
+
+  // ３．データベースを切断する
+  $dbh = null;
+?>
+```
+
+ここまで書けたら、search.phpの全体のコードは次のようになっていると思います。
+
+```php
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>検索ページ</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <form action="" method="post">
+    <p>検索したいcodeを入力してください。</p>
+    <input type="text" name="code">
+    <input type="submit" value="検索">
+  </form>
+<?php
+  // １．データベースに接続する
+  $dsn = 'mysql:dbname=phpkiso;host=localhost';
+  $user = 'root';
+  $password = '';
+  $dbh = new PDO($dsn, $user, $password);
+  $dbh->query('SET NAMES utf8');
+
+  // POSTでデータが送信された時のみSQLを実行する
+  if (!empty($_POST)) {
+    // ２．SQL文を実行する
+    $sql = 'SELECT * FROM `survey` WHERE `code` = ' . $_POST['code'];
+    // SQLを実行
+    $stmt = $dbh->prepare($sql);
+    $stmt->execute();
+
+    // データを取得する
+    while (1) {
+      $rec = $stmt->fetch(PDO::FETCH_ASSOC);
+      if ($rec == false) {
+        break;
+      }
+      echo $rec['code'] . '<br>';
+      echo $rec['nickname'] . '<br>';
+      echo $rec['email'] . '<br>';
+      echo $rec['content'] . '<br>';
+      echo '<hr>';
+    }
+  }
+
+  // ３．データベースを切断する
+  $dbh = null;
+?>
+</body>
+</html>
+```
+
+[http://localhost/phpkiso/search.php](http://localhost/phpkiso/search.php)へアクセスし、入力したcodeに紐づくデータが検索できることを確認してください。
+
+### ▼ SQLインジェクション
+今のアンケートフォームシステムの状態だと、悪意のあるユーザーが変な値を入力してページにアクセスした場合、データを改ざんされたり破壊されたる可能性があります。  
+search.phpの検索フォームに「 **3 or 1** 」と入力して検索してみましょう。データが全件出てきてしまいます。
+
+<img src="http://hackers.nexseed.net/images/curriculum_images/anketo_7.png" alt="アンケートフォーム" style="width: 40%;">
+
+これは、検索フォームに入力された「3 or 1」という値によって、実行するSQLが
+```sql
+SELECT * FROM `survey` WHERE `code` = 3 or 1
+```
+という文になり、「code=3 もしくは全部のデータをください」という意味になってしまうからです。  
+このように、フォームなどを利用してシステムが想定しないSQLを実行させ、データベースを不正に操作する攻撃方法のことを「 **SQLインジェクション** 」と言います。
+
+このSQLインジェクションを防ぐために、SQL文を作成して実行する際は **プリペアードステートメント** を使うようにしてください。  
+プリペアードステートメントは、値を置き換えたい部分に「？」を使う方法です。
+
+search.phpのSQL文を作成するところを、次のように修正してください。
+
+```php
+// ２．SQL文を実行する
+$sql = 'SELECT * FROM `survey` WHERE `code` = ?';
+$data[] =  $_POST['code'];
+// SQLを実行
+$stmt = $dbh->prepare($sql);
+$stmt->execute($data);
+```
+
+まず、文字の連結をやめてデータを置き換えたい部分を「？」で指定します。
+
+```php
+$sql = 'SELECT * FROM `survey` WHERE `code` = ?';
+```
+
+そして、置き換えたいデータを別の変数に格納します。この格納する変数は、必ず配列型にしてください。
+
+```php
+$data[] =  $_POST['code'];
+```
+
+SQL文を実行する時、execute()にデータを格納した変数を指定します。
+
+```php
+$stmt->execute($data);
+```
+
+これでもう一度検索フォームに「3 or 1」と入力し、全件表示されなかったらOKです。
