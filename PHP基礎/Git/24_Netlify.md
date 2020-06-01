@@ -4,8 +4,7 @@ Netlifyは、GitHubのレポジトリと連携して、アプリやウェブサ�
 この解説はGitHubにレポジトリ作成までされている前提で進みます。<br>
 まだできていない方は、以下のリンクからGit、GitHubの解説を先にお読みください。
 
-* [GitとGitHubの概念](https://github.com/NexSeed00/git_basic)
-* [GitHubにファイルをアップロードする手順](https://github.com/NexSeed00/github)
+* [GitとGitHubの概念](https://github.com/NexSeed00/STO/blob/master/PHP%E5%9F%BA%E7%A4%8E/Git/18-2_Git%E3%81%A8Github.md)
 
 ## 手順
 
