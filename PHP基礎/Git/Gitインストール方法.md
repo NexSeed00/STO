@@ -21,6 +21,13 @@
 ```
 $ git --version
 ```
+上記コマンドをターミナルに打ち込みEnterを押しましょう
 
-![](img/ter_conf)
+![](img/ter_conf.png)
+
+ターミナルで下記のように表示されれば成功です。
+
+```
+git version 2.24.0
+```
 
