@@ -23,7 +23,7 @@ $ git --version
 ```
 上記コマンドをターミナルに打ち込みEnterを押しましょう
 
-![](img/ter_conf.png)
+![](img/ter_comf.png)
 
 ターミナルで下記のように表示されれば成功です。
 
