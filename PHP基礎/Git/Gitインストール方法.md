@@ -15,3 +15,12 @@
 下記のような画像となっていれば成功です。
 
 ![](img/term.png)
+
+### step Gitインストール
+
+```
+$ git --version
+```
+
+![](img/ter_conf)
+
