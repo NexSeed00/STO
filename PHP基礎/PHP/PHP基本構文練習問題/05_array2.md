@@ -12,21 +12,21 @@
  | d    | D   |
 
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
+```
 	$alphabet = [
     'a' => 'A',
     'b' => 'B',
     'c' => 'C',
     'd' => 'D',
 	];
-	```
+```
 		
-	</div></details>
+</div></details>
 	
 
-	<br>
+<br>
 	
 42. 41で作成した連想配列に以下の値を追加してください。  
 	
@@ -34,16 +34,16 @@
  | ---- | --- |
  | e    | E   |
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
-	$alphabet['e'] = 'E';
-	```
+```
+$alphabet['e'] = 'E';
+```
 		
-	</div></details>
+</div></details>
 	
 
-	<br>
+<br>
 	
 	
 43. 41で作成した連想配列の以下の値を更新してください。  
@@ -52,16 +52,16 @@
  | ---- | --- |
  | a    | AAA |
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
-	$alphabet['a'] = 'AAA';
-	```
+```
+$alphabet['a'] = 'AAA';
+```
 		
-	</div></details>
+</div></details>
 	
 
-	<br>
+<br>
 	
 44. 41で作成した連想配列の以下の値を削除してください。  
 	
@@ -69,121 +69,121 @@
  | ---- | --- |
  | b    | B   |
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
-	unset($alphabet['b']);
-	var_dump($alphabet);
-	```
+```
+unset($alphabet['b']);
+var_dump($alphabet);
+```
 		
-	</div></details>
+</div></details>
 	
 
-	<br>
+<br>
 	
 45. 41で作成した連想配列のキーを全て出力してください。 
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
-	foreach ($alphabet as $key => $value) {
-    	echo $key;
-    	echo '<br>';
-	}
-	```
+```
+foreach ($alphabet as $key => $value) {
+    echo $key;
+    echo '<br>';
+}
+```
 		
-	</div></details>
+</div></details>
 	
 
-	<br>
+<br>
 	
 
 	
 46. 41で作成した連想配列の値を全て出力してください。   
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
-	foreach ($alphabet as $value) {
+```
+foreach ($alphabet as $value) {
     echo $value;
     echo '<br>';
 	}
-	```
+```
 		
-	</div></details>
+</div></details>
 	
 
 	<br>
 	
 47. 41で作成した連想配列のキーと値を全て出力してください。   
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
-	foreach ($alphabet as $key => $value) {
+```
+foreach ($alphabet as $key => $value) {
     echo $key . ': ' . $value;
     echo '<br>';
 	}
-	```
+```
 		
-	</div></details>
+</div></details>
 	
 
-	<br>
+<br>
 	
 48. 41で作成した連想配列のキーと値を全て出力してください。   
 ただし、キーが「c」の場合出力しないでください。
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
-	foreach ($alphabet as $key => $value) {
+```
+foreach ($alphabet as $key => $value) {
     if ($key !== 'c') {
         echo $key . ': ' . $value;
         echo '<br>';
     }
-	}
-	```
+}
+```
 		
-	</div></details>
+</div></details>
 	
 
-	<br>
+<br>
 
 49.  41で作成した連想配列のキーと値を全て出力してください。   
 ただし、値が「B」の場合出力しないでください。
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
-	foreach ($alphabet as $key => $value) {
+```
+foreach ($alphabet as $key => $value) {
     if ($value !== 'B') {
         echo $key . ': ' . $value;
         echo '<br>';
     }
-	}
-	```
+}
+```
 		
-	</div></details>
+</div></details>
 	
 
-	<br>
+<br>
 	
 50. 41で作成した連想配列のキーと値を全て出力してください。   
 ただし、キーが「b」の場合または値が「C」の場合は出力しないでください。
 
-	<details><summary>回答例</summary><div>
+<details><summary>回答例</summary><div>
 		
-	```
-	foreach ($alphabet as $key => $value) {
+```
+foreach ($alphabet as $key => $value) {
     if ($key !== 'b' && $value !== 'C') {
         echo $key . ': ' . $value;
         echo '<br>';
     }
 	}
-	```
+```
 		
-	</div></details>
+</div></details>
 	
 
-	<br>
+<br>
