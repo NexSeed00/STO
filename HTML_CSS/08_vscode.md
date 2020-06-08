@@ -60,7 +60,7 @@ VS Codeには、便利な機能が元々たくさん備わっていますが、�
 ## ショートカット
 
 ### よく使うコマンド
-|macOS|Windows|コマンド
+|Windows|macOS|コマンド
 |:---| :--- | :--- |
 |Ctrl + C|Command + C|コピー|
 |Ctrl + X|Command + X|切り取り|
