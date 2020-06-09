@@ -91,19 +91,20 @@ HTMLのbodyタグは以下のような構造です。
 プログラムとは関係ないメモになります。
 ```html
 <body>
-    <!-- header -->
+    <!-- header  後ほどheaderタグに書き換える--> 
     <div></div>
+    <main>
+      <!-- welcome -->
+      <div></div>
 
-     <!-- welcome -->
-    <div></div>
+      <!-- programming -->
+      <div></div>
 
-    <!-- programming -->
-    <div></div>
+      <!-- English -->
+      <div></div>
+    </main>    
 
-    <!-- English -->
-    <div></div>
-
-    <!-- footer -->
+    <!-- footer 後ほどfooterタグに書き換える-->
     <div></div>
 
 </body>
@@ -123,19 +124,21 @@ headerは
 そのため以下のような構造になります。
 ```html
  <!-- header -->
- <div>
+ <header>
      <!-- header左側 -->
      <div>
-         <img src="img/seedkun.png" alt="">
+         <img src="./assets/img/logo-white.png" alt="logo">
          <span>NexSeed</span>
      </div>
 
      <!-- header右側 -->
-     <div>
-         <div>PROGRAMMING</div>
-         <div>ENGLISH</div>
+     <div class="header-right">
+       <ul>
+           <li>Programming</li>
+           <li>English</li>
+       </ul>
      </div>
- </div>
+ </header>
 ```
 
 このようにWebサイトがどんな構造になっているか
@@ -151,7 +154,7 @@ HTMLの記述ができたので、CSSをつけるためにクラスをつけま�
 おそらく必要と思われる場所につけていただければ問題ありません。
 
 ```html
-<div class="header">
+<header>
   <!-- header左側 -->
   <div class="header-left">
       <img src="img/seedkun.png" alt="">
@@ -160,10 +163,12 @@ HTMLの記述ができたので、CSSをつけるためにクラスをつけま�
 
   <!-- header右側 -->
   <div class="header-right">
-      <div>PROGRAMMING</div>
-      <div>ENGLISH</div>
+       <ul>
+           <li>Programming</li>
+           <li>English</li>
+       </ul>
   </div>
-</div>
+</header>
 ```
 
 ---
@@ -208,10 +213,10 @@ HTMLの記述ができたので、CSSをつけるためにクラスをつけま�
 
 #### headerの要素を横並びにする
 `header-left`クラスと`header-right`クラスを横並びにしたいので、  
-セレクタは`.header`、プロパティは`display:flex`となります。  
+セレクタは`header`、プロパティは`display:flex`となります。  
 ※Flexboxで要素を横並びにする場合、横並びにしたい要素の親要素に`display:flex`をつけます。
 ```css
-.header {
+header {
   background-color: #1dace0;
   display: flex;
 }
@@ -222,7 +227,7 @@ HTMLの記述ができたので、CSSをつけるためにクラスをつけま�
 横並びになりましたが、  
 左よせになってるため、左右に離すために`justify-content: space-between`を使用します。
 ```css
-.header {
+ header {
   background-color: #1dace0;
   display: flex;
   justify-content: space-between;  
@@ -231,13 +236,13 @@ HTMLの記述ができたので、CSSをつけるためにクラスをつけま�
 
 #### headerの両端に隙間をあける
 `header-left`クラスと`header-right`クラスの間に隙間があきましたが、  
-それぞれの外側の隙間がなくなってしまったので、`header`クラスにpaddingをつけます。
+それぞれの外側の隙間がなくなってしまったので、`header`にpaddingをつけます。
 ```css
-.header {
+header {
   background-color: #1dace0;
   display: flex;
   justify-content: space-between;
-  padding: 0 80px;
+  padding: 14px 40px;
 }
 ```
 
@@ -247,7 +252,7 @@ HTMLの記述ができたので、CSSをつけるためにクラスをつけま�
 以下にheader部分に使用したCSSを全て記述してます。
 ```css
 /* header */
-.header {
+header {
   display: flex;
   justify-content: space-between;
   background-color: #1dace0;
@@ -259,26 +264,27 @@ HTMLの記述ができたので、CSSをつけるためにクラスをつけま�
 .header-left {
   display: flex;
   align-items: center;
-  margin-left: 80px;
 }
 
-.header-left img {
-  height: 60px;
+.header-left span {
+  color: white;
+  margin-left: 22px;
+  font-size: 20px;
 }
 
-.header-left .name {
-  color: #eae51f;
-}
-
-.header-right {
+.header-right ul {
+  color: white;
+  font-size: 20px;
   display: flex;
-  align-items: center;
-  margin-right: 80px;
+  /* margin-right: 20px; */
+}
+.header-right li {
+  margin-left: 20px;
+}
+li {
+  list-style: none;
 }
 
-.header-right div {
-  padding: 0 20px;
-}
 /* headerここまで */
 ```
 
