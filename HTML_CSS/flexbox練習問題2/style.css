@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    height: 80vh;
+    width: 80vw;
+}
+.circle {
+    background-color: red;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+}
