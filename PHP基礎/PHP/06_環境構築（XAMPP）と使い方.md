@@ -19,10 +19,10 @@ Basicコースでは、XAMPPを使って簡単にプログラミング学習の�
 [公式サイト](https://www.apachefriends.org/jp/index.html)でインストーラをダウンロードします。  
 それぞれのOSに合ったインストーラをダウンロードしてください。
 <h3>Mac編</h3>
-<iframe width="80%" height="450px" src="https://www.youtube.com/embed/k5kGmWOdmrE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+https://www.youtube.com/embed/k5kGmWOdmrE
 <br>
 <h3>Windows編</h3>
-<iframe width="80%" height="450px" src="https://www.youtube.com/embed/FHFeISydZ7k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+https://www.youtube.com/embed/FHFeISydZ7k
 <br><br><br><br>
 <h4>手順</h4>
 <img src="http://hackers.nexseed.net/images/curriculum_images/xampp_1.png" alt="XAMPP" style="width: 80%;">
