@@ -18,7 +18,7 @@
                 </nav>
             </div>
         </div>
-
+        <h1 style="text-align: center;">Sign in</h1>
         <div class="row mt-4 px-4">
             <div class="col-12">
                 <form action="signin.php" method="post">

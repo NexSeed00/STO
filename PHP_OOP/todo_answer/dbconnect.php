@@ -8,6 +8,7 @@ class DbManager
     {
         //DBに接続
         $host = "localhost";
+        // $dbname = "データベース名";
         $dbname = "todo";
         $charset = "utf8mb4";
         $user = 'root';

@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <h1>サインアップ</h1>
     <div class="container-fulid">
         <div class="row">
             <div class="col-12">
@@ -19,7 +18,7 @@
                 </nav>
             </div>
         </div>
-
+        <h1 style="text-align: center;">Sign up</h1>
         <div class="row mt-4 px-4">
             <div class="col-12">
                 <form action="signup.php" method="post">
