@@ -196,8 +196,8 @@ HTMLの記述ができたので、CSSをつけるためにクラスをつけま�
 もう一方の値が自動で決まります。今回は高さを指定します。  
 そのためプロパティは`height`です。
 ```css
-.header-left img {
-    height: 60px;
+.logo {
+  height: 36px;
 }
 ```
 
@@ -206,7 +206,7 @@ HTMLの記述ができたので、CSSをつけるためにクラスをつけま�
 セレクタは`.header`となります。  
 プロパティは`background-color`です。
 ```css
-.header {
+header {
   background-color: #1dace0;
 }
 ```
@@ -315,6 +315,3 @@ CSSでは色の指定をする方法が複数あり、
 [色 | MDN](https://developer.mozilla.org/ja/docs/Web/Guide/CSS/Getting_started/Color)  
 [Color | MDN](https://developer.mozilla.org/ja/docs/Web/CSS/color)
 
-### 回答
-回答となるフォルダは`answer/welcome_nexseed` です。  
-必要に応じて確認してください。
