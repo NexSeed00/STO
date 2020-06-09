@@ -12,7 +12,7 @@ Webサイトの作成を行います。
 
 実践的なwebサイトの作成を通して、今まで学んできた内容の定着をはかります。
 
-[作成するWebサイト](https://nexseed.netlify.com/welcome_nexseed/)
+[作成するWebサイト](https://heuristic-kilby-bf0e3e.netlify.app/)
 
 わからない部分は今までのカリキュラムを見返したり、
 Google検索などしてみてください。
