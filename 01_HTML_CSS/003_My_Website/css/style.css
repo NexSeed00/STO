@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Yu Gothic Merdium", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    color: #333;
+}
+h1 {
+    font-family: "Yu Micho", "ヒラギノ明朝 ProN W3", "HG明朝E", "MS P明朝", "MS 明朝", Helvetica, sans-serif;
+}
+header {
+    width: 100%;
+    background-color: #212235;
+    display: flex;
+    justify-content: left;
+}
+.header-left {
+   margin-left: 30px;
+   padding: 11px 0;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+}
+@media screen and (max-width: 830px) {
+    /*　画面サイズが830px以下の時はここを読み込む　*/
+    .header-left {
+        margin-left: 15px;
+    }
+}
+.icon {
+    height: 38px;
+}
+.header-left span {
+    margin-left: 18px;
+    color: white;
+    font-size: 26px;
+    font-family: serif;
+}
+.main-visual {
+    height: 400px;
+    width: 100%;
+    background: url("../img/island.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.description {
+    text-align: center;
+}
+.description h1 {
+    font-size: 23px;
+    padding: 50px;
+}
+.description p {
+    margin-bottom: 70px;
+}
+@media screen and (max-width: 830px) {
+    .description p {
+        padding: 0 5px;
+    }
+}
+.profile-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+@media screen and (max-width: 830px) {
+    .profile-wrap {
+        flex-direction: column;   
+    }
+}
+.profile-left, .profile-right {
+    width: 30%;
+}
+@media screen and (max-width: 830px) {
+    .profile-left, .profile-right {
+        width: 100%;   
+    }
+}
+.profile-left {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+.profile-img {
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.profile-right {
+    padding-left: 50px;
+}
+@media screen and (max-width: 830px) {
+    .profile-right {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+.profile-right h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.profile-details {
+    display: flex;
+    font-size: 22px;
+}
+@media screen and (max-width: 830px) {
+    .profile-details {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 45px;
+    }
+}
+.details-left, .details-right {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 40px;
+}
+.details-left p {
+    font-weight: bolder;
+}
+.details-right {
+    padding-left: 30px;
+}
+.recs-wrap {
+    width: 100%;
+    text-align: center;
+}
+.section-title {
+    font-size: 25px;
+}
+.recs-wrap h1 {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+.recs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 830px) {
+    .recs {
+        flex-direction: column;
+        width: 90%;
+    }
+}
+.rec {
+    width: 31%;
+    height: 480px;
+    text-align: left;
+}
+@media screen and (max-width: 830px) {
+    .rec {
+        width: 100%;
+        height: auto;
+        margin-bottom: 41px;
+    }
+}
+.rec img {
+    width: 100%;
+}
+.rec-title {
+    margin: 10px 0;
+    font-size: 19px;
+}
+.rec-bottom {
+    height: 274px;
+}
+@media screen and (max-width: 830px) {
+    .rec-bottom {
+        height: auto;
+    }
+}
+.rec-description {
+    height: 140px;
+}
+@media screen and (max-width: 830px) {
+    .rec-description {
+        height: auto;
+    }
+}
+.btn-wrap {
+    text-align: right;
+}
+button {
+    font-size: 18px;
+    background-color: #212235;
+    color: white;
+    border-radius: 5px;
+    font-family: serif;
+}
+button:hover {
+    opacity: .8;
+}
+.rec-bottom button {
+    padding: 8px 14px;
+}
+@media screen and (max-width: 830px) {
+    .rec-bottom button {
+        margin-top: 18px;
+    }
+}
+.contact {
+    text-align: center;
+}
+.contact h1 {
+    padding: 120px 0 50px;
+}
+@media screen and (max-width: 830px) {
+    .contact h1 {
+        padding: 60px 0 50px;
+    }
+}
+.contact p {
+    margin-bottom: 30px;
+    padding: 0 5px;
+}
+.btn-contact {
+    padding: 21px 63px;
+    margin-bottom: 90px;
+}
+
+footer {
+    background-color: #1A1A1A;
+    text-align: center;
+}
+footer p {
+    padding: 20px 0;
+    color: #F5F5F5;
+}
