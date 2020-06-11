@@ -568,12 +568,62 @@ XAMPPのhtdocsフォルダに「php_practice.php」というファイルを作�
 変数$i = 100; を用意し、100から1まで1つずつカウントダウンするプログラムを作成してください。
 （1つずつ改行して表示して下さい）
 
+<details><summary>回答例</summary><div>
+		
+```
+<?php
+    for ($i = 100; $i >= 1; $i--) {
+        echo $i . '<br>';
+    }
+?>
+
+```
+</div></details>
+	
+<br>
+
 ### 問題２
 正の整数1から9に、それぞれ3を掛けた数を半角スペース区切りで出力して下さい。
+
+<details><summary>回答例</summary><div>
+		
+```
+<?php
+    for ($i = 1; $i <= 9; $i++) {
+      echo $i * 3 . ' ';
+    }
+?>
+
+```
+</div></details>
+	
+<br>
 
 ### 問題３
 1から100までの数をプリントするプログラムを書きなさい。
 ただし3の倍数のときは数の代わりに｢Fizz｣と、5の倍数のときは｢Buzz｣とプリントし、3と5両方の倍数の場合には｢FizzBuzz｣とプリントすること。
+
+<details><summary>回答例</summary><div>
+		
+```
+<?php
+    for($i = 1; $i <=100; $i++){
+        if($i % 15 === 0){
+            echo "FizzBuzz" . '<br>';
+        } elseif ($i % 5 === 0){
+            echo "Buzz" . '<br>';
+        } elseif ($i % 3 === 0){
+            echo "Fizz" . '<br>';
+        } else {
+            echo $i . '<br>';
+        }
+    }
+?>
+
+```
+</div></details>
+	
+<br>
 
 ### 問題４
 1〜100までの数字を表示させるプログラムを作りましょう。
@@ -587,11 +637,43 @@ XAMPPのhtdocsフォルダに「php_practice.php」というファイルを作�
 91 92 93 94 95 96 97 98 99 100
 ```
 
+<details><summary>回答例</summary><div>
+		
+```
+<?php
+    for ($i = 1; $i <= 100; $i++) {
+      if ($i % 10 == 0 ){
+          echo $i . '<br>';
+      } else {
+          echo $i . ' ';
+      }
+    }  
+?>
+
+```
+</div></details>
+	
+<br>
+
 ### 問題５
 下記のような配列変数「alpha」があります。この配列のうち、'A'という文字が何回登場してくるか計算して結果を出力してください。
 
-```php
+```
 <?php
   $alpha = array('E', 'A', 'D', 'B', 'A', 'C', 'A', 'B', 'E', 'E', 'A', 'A', 'C');
 ?>
 ```
+
+<details><summary>回答例</summary><div>
+		
+```
+<?php
+    $alpha = array('E', 'A', 'D', 'B', 'A', 'C', 'A', 'B', 'E', 'E', 'A', 'A', 'C');
+    $counts = array_count_values($alpha);
+    echo $counts['A']
+?>
+
+```
+</div></details>
+	
+<br>
