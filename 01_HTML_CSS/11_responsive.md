@@ -19,7 +19,7 @@ CSSのレスポンシブとは、パソコンやスマホ、タブレットな�
 h1 {
  font-size: 30px;
 }
-@media screen and (min-width:780px) { 
+@media screen and (min-width:480px) { 
     h1 { 
         font-size: 300px;
     }
@@ -46,7 +46,7 @@ h1 {
 h1 {
  font-size: 30px;
 }
-@media screen and (min-width:780px) { 
+@media screen and (min-width:480px) { 
     h1 { 
         font-size: 300px;
     }
@@ -60,7 +60,7 @@ h1 {
 h1 {
  font-size: 300px;
 }
-@media screen and (max-width:780px) { 
+@media screen and (max-width:480px) { 
     h1 { 
         font-size: 30px;
     }
