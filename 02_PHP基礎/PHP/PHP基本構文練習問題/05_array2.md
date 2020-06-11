@@ -15,12 +15,12 @@
 <details><summary>回答例</summary><div>
 		
 ```
-	$alphabet = [
+$alphabet = [
     'a' => 'A',
     'b' => 'B',
     'c' => 'C',
     'd' => 'D',
-	];
+];
 ```
 		
 </div></details>
@@ -107,13 +107,13 @@ foreach ($alphabet as $key => $value) {
 foreach ($alphabet as $value) {
     echo $value;
     echo '<br>';
-	}
+}
 ```
 		
 </div></details>
 	
 
-	<br>
+<br>
 	
 47. 41で作成した連想配列のキーと値を全て出力してください。   
 
@@ -123,7 +123,7 @@ foreach ($alphabet as $value) {
 foreach ($alphabet as $key => $value) {
     echo $key . ': ' . $value;
     echo '<br>';
-	}
+}
 ```
 		
 </div></details>
@@ -180,7 +180,7 @@ foreach ($alphabet as $key => $value) {
         echo $key . ': ' . $value;
         echo '<br>';
     }
-	}
+}
 ```
 		
 </div></details>
