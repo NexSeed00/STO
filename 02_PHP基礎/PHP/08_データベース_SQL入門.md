@@ -194,9 +194,10 @@ DELETE文でWHERE条件を忘れてしまうと、全てのコードが消えて
     * **SELECT カラム名1, カラム名2, ... FROM テーブル名 WHERE 条件;**
 * 例文
     * データを全取得する場合
-        * ```
+```
 SELECT * FROM `users`
 ```
+
     * 指定したカラムのみ取得する場合
         * ```
 SELECT `id`, `name` FROM `users`;
