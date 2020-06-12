@@ -84,8 +84,8 @@ PRIMARY KEY（主キー）
 絶対に他のレコードと重複しない一意（ユニーク）なデータにしたい場合に設定します。<br>
 主キー制約が設定されたカラムにはPRIMARYというKey,Nameのユニークインデックスが作成され、そのカラムの値は他のカラムとの重複不可、かつnull（何も入れないという意味）も不可となります。
 <br>
-MySQL - <a href="http://shindolog.hatenablog.com/entry/2015/04/08/155457">インデックスとは</a><br>
-MySQL - <a href="http://mysql.akarukutanoshiku.com/category6/entry30.html">PRIMARY KEY（主キー）とは</a><br>
+MySQL - インデックスとは
+MySQL - PRIMARY KEY（主キー）とは
 <br>
 <img src="http://hackers.nexseed.net/images/curriculum_images/about_phpmyadmin6.png" style="width: 80%"><br>
 <br>
