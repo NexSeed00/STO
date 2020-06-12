@@ -199,9 +199,10 @@ SELECT * FROM `users`
 ```
 
     * 指定したカラムのみ取得する場合
-        * ```
+```
 SELECT `id`, `name` FROM `users`;
 ```
+
     * 条件つきでデータを取得する場合
         * ``` 
 SELECT * FROM `users` WHERE id = 2; 
