@@ -193,29 +193,38 @@ DELETE文でWHERE条件を忘れてしまうと、全てのコードが消えて
 * 構文
     * **SELECT カラム名1, カラム名2, ... FROM テーブル名 WHERE 条件;**
 * 例文
-    * データを全取得する場合
+
+データを全取得する場合
+
 ```
 SELECT * FROM `users`
 ```
 
-    * 指定したカラムのみ取得する場合
+指定したカラムのみ取得する場合
+
 ```
 SELECT `id`, `name` FROM `users`;
 ```
 
-    * 条件つきでデータを取得する場合
-        * ``` 
+条件つきでデータを取得する場合
+
+``` 
 SELECT * FROM `users` WHERE id = 2; 
 ```
-    * 複数の条件で絞り込んでデータを取得
-        * ``` 
+
+複数の条件で絞り込んでデータを取得
+
+``` 
 SELECT * FROM `users` WHERE id > 3 and id < 6;
 ```
-    * 並べ替えてデータを取得
-        * ``` 
+
+並べ替えてデータを取得
+
+``` 
 SELECT * FROM `users` ORDER BY id ASC; (昇順) 
 ```
-        * ``` 
+
+``` 
 SELECT * FROM `users` ORDER BY id DESC; (降順) 
 ```
 
