@@ -15,5 +15,6 @@ class User extends Model
     // * (emailをもとにユーザーを取得するメソッド中身を追加する)
     public function findByEmail($data)
     {
+        
     }
 }
