@@ -118,7 +118,7 @@ SELECT 取得したいカラム名1, 取得したいカラム名2, ... FROM テ�
     * カラムの値が検索文字に一致するレコードを表示（完全一致）
 
 ```sql
-WHERE `email`="seed@email.com"
+WHERE `email`="seed@mail.com"
 ```
 
 * **カラム名 LIKE 検索文字**
