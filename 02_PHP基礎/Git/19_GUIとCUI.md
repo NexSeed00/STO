@@ -37,6 +37,5 @@ Mac OSはUNIXから派生したOSなのでCUIで同じコマンドが使えま�
 コマンド操作はUnix,Linuxについて学んだ後に取り組んでいきましょう。
 <br>GUIツールはGitの操作を簡単に行える**Sourcetree**を紹介しています。GitやGithubについての講義を受けた後に取り組みましょう。簡単とは言っても学習はじめは操作することに慣れないと難しく感じるかもしれません。
 <br>**繰り返し操作を行い習得していきましょう。**<br>
-CUI: * [Sourcetree](https://github.com/NexSeed00/Git/blob/master/Sourecetree%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9.md) 
 <br>
 GUI: * [Sourcetree](https://github.com/NexSeed00/Git/blob/master/Sourecetree%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9.md) 
