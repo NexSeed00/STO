@@ -173,10 +173,10 @@ Git・Github・SourceTreeについては下記のカリキュラムをご覧く�
 </html>
 ```
 <br>
-- github上**"sample_githubリポジトリ"**を作成
-- Initial Commitをする
-- SourceTreeでローカルで作成したsample_githubとGithubのリポジトリを紐づける。
-- masterをpushする
+- github上**"sample_githubリポジトリ"**を作成<br>
+- Initial Commitをする<br>
+- SourceTreeでローカルで作成したsample_githubとGithubのリポジトリを紐づける。<br>
+- masterをpushする<br>
 
 ### 実践
 まず始めに、コンフリクトを起こすためにブランチ、**sample1**, **sample2**の二つ用意しましょう。<br>**二つともmasterからブランチを切るようにしましょう。**<br>
