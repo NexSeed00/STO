@@ -103,12 +103,12 @@ Git・Github・SourceTreeについては下記のカリキュラムをご覧く�
 <br>
 <img src="http://hackers.nexseed.net/images/curriculum_images/scrum_github2.png" style="width: 100%"><br>
 <br>
-1. リモートmasterブランチからローカルmasterブランチへpull <span style="color: red;">(※例外あり)</span>
-2. トピックブランチを作成 <span style="color: red;">★★★注意★★★</span>
-3. 開発 - commit
-4. ローカルトピックブランチからリモートトピックブランチへpush
-5. Pull Request
-6. マージ or 修正依頼<span style="color: red;">(※再push)</span>
+1. リモートmasterブランチからローカルmasterブランチへpull <span style="color: red;">(※例外あり)</span><br>
+2. トピックブランチを作成 <span style="color: red;">★★★注意★★★</span><br>
+3. 開発 - commit<br>
+4. ローカルトピックブランチからリモートトピックブランチへpush<br>
+5. Pull Request<br>
+6. マージ or 修正依頼<span style="color: red;">(※再push)</span><br>
 
 ### [※例外あり] について
 下記の場合はpullではなくclone<br>
