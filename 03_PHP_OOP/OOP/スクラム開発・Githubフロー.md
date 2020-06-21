@@ -119,9 +119,10 @@
 <h2 style="color: orange;">チーム開発Githubフロー</h2>
 Git・Github・SourceTreeについては下記のカリキュラムをご覧ください。<br>
 
-- <a href="http://hackers.nexseed.net/curriculums/72">Git</a><br>
-- <a href="http://hackers.nexseed.net/curriculums/73">Github</a><br>
-- <a href="http://hackers.nexseed.net/curriculums/75">SourceTree</a><br>
+- <a href="https://github.com/NexSeed00/STO/blob/master/02_PHP%E5%9F%BA%E7%A4%8E/Git/16_Git%E6%A6%82%E8%A6%81.md">Git</a><br>
+- <a href="https://github.com/NexSeed00/STO/blob/master/02_PHP%E5%9F%BA%E7%A4%8E/Git/17_Github%E6%A6%82%E8%A6%81%E3%81%A8%E7%99%BB%E9%8C%B2.md">Github</a><br>
+- <a href="https://github.com/NexSeed00/STO/blob/master/02_PHP%E5%9F%BA%E7%A4%8E/Git/18-2_Git%E3%81%A8Github.md">GitとGithub</a><br>
+- <a href="https://github.com/NexSeed00/STO/blob/master/02_PHP%E5%9F%BA%E7%A4%8E/Git/21_Sourcetree%E4%BD%BF%E3%81%84%E6%96%B9.md">SourceTree</a><br>
 
 ### 【基本作業フロー】
 <br>
