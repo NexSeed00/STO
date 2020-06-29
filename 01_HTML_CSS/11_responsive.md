@@ -29,7 +29,7 @@ h1 {
 ちなみに`min`は`minimum`の略で最小値という意味です。
 「以上・以下」や「最小値」など、混乱しそうになるので、下の図を参考に、頭の中を整理してみてください。
 
-![responsive media](img/html/responsive_media.jpg)
+![responsive media](img/html/responsive_media1.jpg)
 
 
 ## 3. モバイルファースト / デスクトップファースト
