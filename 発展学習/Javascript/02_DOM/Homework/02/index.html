@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    section {
+      border: 1px solid black;
+      margin-bottom: 20px;
+    }
+  </style>
+
+</head>
+<body>
+  <section>
+    <p>Q1</p>
+    <p>Checkボタンがクリックされた時、入力された名前と年齢をチェックする</p>
+    <p>名前が空の場合、エラーを表示する</p>
+    <p>年齢が20未満の場合、エラーを表示する</p>
+
+    <br>
+
+    <labe>名前</labe>
+    <input type="text" name="username">
+    <span id="usernameError">ここにエラーがでます</span>
+
+    <br>
+
+    <labe>年齢</labe>
+    <input type="number" name="age">
+    <span id="ageError">ここにエラーがでます</span>
+    
+    <br>
+
+    <button id="check2">Check</button>
+
+    <p id="username"></p>
+    <p id="age"></p>
+  </section>
+
+  <section>
+    <p>Q2</p>
+    <p>「リンゴ」をリストの先頭に追加してください</p>
+
+    <br>
+
+    <ul id="fruits">
+      <li>メロン</li>
+      <li>みかん</li>
+    </ul>
+</section>
+
+  <script src="app.js"></script>
+</body>
+</html>

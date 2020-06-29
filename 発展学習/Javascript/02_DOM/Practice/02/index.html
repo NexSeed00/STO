@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    section {
+      border: 1px solid black;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <p>Q1</p>
+    <p>以下のテキストがクリックされた時、背景色を変更する</p>
+
+    <br>
+
+    <p id="text1">Click Me!!!</p>
+  </section>
+
+  <section>
+    <p>Q2</p>
+    <p>以下のテキストがマウスオーバーした時、背景色を変更する</p>
+
+    <br>
+
+    <p id="text2">Mouse Over Me!!!</p>
+  </section>
+
+  <section>
+    <p>Q3</p>
+    <p>以下のテキストがマウスオーバーした時、背景色を変更する</p>
+    <p>またマウスが外れた時、背景色を白に戻す</p>
+
+    <br>
+
+    <p id="text3">Mouse Over Me!!!</p>
+  </section>
+
+  <section>
+    <p>Q4</p>
+    <p>Checkボタンがクリックされた時、入力されたusernameをpタグに表示してください</p>
+
+    <br>
+    <labe>名前</labe>
+    <input type="text" name="username1">
+    <button id="check1">Check</button>
+
+    <p id="usernameTextView1"></p>
+  </section>
+
+  <section>
+    <p>Q4</p>
+    <p>Checkボタンがクリックされた時、入力された名前と年齢をチェックする</p>
+    <p>名前が空の場合、エラーを表示する</p>
+    <p>年齢が20未満の場合、エラーを表示する</p>
+
+    <br>
+
+    <labe>名前</labe>
+    <input type="text" name="username">
+    <span id="usernameError"></span>
+
+    <br>
+
+    <labe>年齢</labe>
+    <input type="number" name="age">
+    <span id="ageError"></span>
+    
+    <br>
+
+    <button id="check2">Check</button>
+
+    <p id="username"></p>
+    <p id="age"></p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>

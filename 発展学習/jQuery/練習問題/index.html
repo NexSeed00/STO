@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>jQuery問題</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="./assets/js/app-answer.js"></script>
+    <script defer src="./assets/js/app.js"></script>
+  </head>
+  <body>
+      <h1>jQuery問題</h1>
+      <p>
+        developer toolの使い方に慣れましょう <br>
+        実際に動作を確認して、テキストやclassの内容がどう変わってるか確認しながら <br>
+        解いてみましょう。
+      </p>
+
+
+      <div>
+        <p>Q1</p>
+        <p>クリックで要素のサイズを変更する</p>
+        <p>※クリックされたボタンに「large-btn」というクラスをつける</p>
+      
+        <br>
+      
+        <button id="q1-btn">ボタン</button>
+      </div>
+
+      <div>
+        <p>Q2</p>
+        <p>ホバーで要素の透明度を変更する</p>
+        <p>
+          ※ボタンにマウスにカーソルが重なったらopacityを0.5にする
+        </p>
+      
+        <br>
+      
+        <button id="q2-btn">ボタン</button>
+      </div>
+
+      <div>
+        <p>Q3</p>
+        <p>ホバーで要素の透明度を変更する</p>
+        <p>
+          ※ボタンにマウスにカーソルが重なったらopacityを0.5にする <br>
+          マウスカーソルが離れたらopacityを1に戻す
+        </p>
+      
+        <br>
+      
+        <button id="q3-btn">ボタン</button>
+      </div>
+
+      <div>
+        <p>Q4</p>
+        <p>
+          以下のボタンがクリックされた時、
+          テキストを任意の文字に変更する。
+        </p>
+      
+        <br>
+      
+        <button id="q4-btn">ボタン</button>
+        <p id="q4-text">この文字を変更する</p>
+      </div>
+
+      <div>
+        <p>Q5</p>
+        <p>
+          以下のボタンがクリックされた時、
+          テキストがりんごの要素前に、以下の要素を追加する。 <br>
+          tag: li <br>
+          text: ぶどう <br>
+          class: grape
+        </p>
+      
+        <br>
+      
+        <button id="q5-btn">ボタン</button>
+        <ul>
+          <li class="apple">りんご</li>
+        </ul>
+      </div>
+
+      <div>
+        <p>Q6</p>
+        <p>
+          以下のボタンがクリックされた時、<br>
+          pタグ内の最後に以下の内容を追加 <br>
+          
+          tag: span <br>
+          text: 追加 <br>
+          class: red
+        </p>
+      
+        <br>
+      
+        <button id="q6-btn">ボタン</button>
+        <p class="q6-text">
+          このテキストの後ろに追加
+        </p>
+      </div>
+
+      <div>
+        <p>Q7</p>
+        <p>
+          以下のボタンがクリックされた時、<br>
+          クリックされたボタンに「on」というクラスがついていれば、 <br />
+          「on」というクラスを外す <br />
+          「on」というクラスがついていなければ「on」というクラスをつける
+        </p>
+      
+        <br>
+      
+        <p id="q7-btn" class="js-hamburger hamburger">
+          <span></span>
+        </p>
+      </div>
+
+      <div>
+        <p>Q8</p>
+        <p>
+          関東がクリックされた時、<br>
+          ddタグの要素をスライドで表示する、 <br />
+          ※ siblingsとslideToggleを使用する。
+        </p>
+
+        <br>
+
+        <dl class="toggle-menu">
+          <dt id="q8-btn">関東</dt>
+          <dd>東京</dd>
+          <dd>千葉</dd>
+          <dd>埼玉</dd>
+          <dd>神奈川</dd>
+          <dd>茨城</dd>
+          <dd>栃木</dd>
+          <dd>群馬</dd>
+        </dl>
+      </div>
+
+      <div>
+        <p>Q9</p>
+        <p>
+          以下のボタンがクリックされた時、<br>
+          ページの最上部に戻る <br>
+          ※ animateを使用
+        </p>
+
+        <br>
+
+        <button id="q9-btn">ページTOPに戻る</button>
+      </div>
+
+      <div>
+        <p>Q10</p>
+        <p>
+          表示ボタンがクリックされた時、<br>
+          水色の玉を表示 <br>
+          非表示ボタンがクリックされた時、<br>
+          水色の玉を非表示 <br>
+          ※ animateを使用
+        </p>
+      
+        <br>
+      
+        <button class="q10-show-btn">表示ボタン</button>
+        <button class="q10-hide-btn">非表示ボタン</button>
+
+        <p class="q10-target blue-ball">
+
+        </p>
+      </div>
+
+      <div>
+        <p id="q11">Q11</pp>
+          「Q11」という文字まで画面がスクロールされたら、<br>
+          水色の玉をFadeInする <br>
+          ※jQueryのfadeInメソッドは使用しない <br>
+          ※hideクラスを外すことでfadeInさせる
+        </p>
+      
+        <br>
+      
+        <p class="q11-target blue-ball hide"></p>
+        
+      </div>
+
+      <div>
+        <p id="q-12">Q12</pp>
+          以下のボタンがクリックされた時、<br>
+          水色の玉が画面からはみ出してる場合は <br>
+          右方向に移動させる。 <br>
+          画面内にある場合は、<br>
+          左方向に移動させる。 <br>
+          ※hideクラスの取り外しで実現化 <br>
+          hideクラスの内容はCSSを参照
+        </p>
+      
+        <br>
+      
+        <button id="q12-btn">ボタン</button>
+        <p class="q12-target blue-ball hide"></p>
+      </div>
+
+  </body>
+</html>

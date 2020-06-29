@@ -1,0 +1,124 @@
+div {
+  border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+h1  {
+  text-align: center;
+}
+
+.red {
+  color:red;
+}
+
+.large-btn {
+  padding: 15px 30px;
+}
+
+/* Q8 */
+.toggle-menu dt {
+  margin: 0 auto;
+  width: 80px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.toggle-menu > dd {
+  display: none;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  width: 80px;
+  line-height: 40px;
+  text-align: center;
+  color: #000;
+  cursor: pointer;
+}
+
+.toggle-menu dd + dd {
+  border-top: none;
+}
+/* Q8ここまで */
+
+/* Q7 */
+.hamburger {
+  width: 28px;
+  height: 30px;
+  margin: 30px auto 10px;
+}
+
+.hamburger span:after,
+.hamburger span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+
+.hamburger span:after {
+  top: 9px;
+}
+
+.hamburger span {
+  position: relative;
+  display: block;
+}
+
+.hamburger span,
+.hamburger span:after,
+.hamburger span:before {
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  transition: all 0.5s; /*←アニメーション*/
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.hamburger.on span {
+  background-color: transparent;
+}
+
+.hamburger.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+/* Q7ここまで */
+
+.blue-ball {
+  height: 100px;
+  width: 100px;
+  background-color: #0df;
+  border-radius: 50%;
+}
+
+/* Q11 */
+.q11-target {
+  transition: all 4s ease;
+}
+
+.q11-target.hide {
+  opacity: 0;
+}
+/* Q11ここまで */
+
+/* Q12 */
+.q12-target.hide {
+  transform: translateX(-100px);
+  /* transform: translateX(100vw); */
+}
+
+.q12-target {
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+/* Q12ここまで */
