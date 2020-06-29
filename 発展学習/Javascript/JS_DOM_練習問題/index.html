@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      border: 1px solid black;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- button#btn-test{テスト} -->
+  <button id="btn-test">テスト</button>
+
+  <div>
+    <p>Q1</p>
+    <p>以下のテキストの文字を取得して、console.logで出力する</p>
+
+    <br>
+
+    <p id="q1-text">Hello World</p>
+  </div>
+
+  <div>
+    <p>Q2</p>
+    <p>以下の文字を任意の文字に変更する</p>
+
+    <br>
+
+    <p id="q2-text">変更してください</p>
+  </div>
+
+  <div>
+    <p>Q3</p>
+    <p>以下の文字色を変更する</p>
+
+    <br>
+
+    <p id="q3-text">色を変えてください</p>
+  </div>
+
+  <div>
+    <p>Q4</p>
+    <p>以下の文字の色をすべて変更してください</p>
+
+    <br>
+
+    <p class="q4-text">色を変えてください1</p>
+    <p class="q4-text">色を変えてください2</p>
+    <p class="q4-text">色を変えてください3</p>
+  </div>
+
+  <div>
+    <p>Q5</p>
+    <p>以下の文字の背景色をすべて変更してください</p>
+
+    <br>
+
+    <p class="q5-text">色を変えてください1</p>
+    <p class="q5-text">色を変えてください2</p>
+    <p class="q5-text">色を変えてください3</p>
+  </div>
+
+  <div>
+    <p>Q6</p>
+    <p>以下のテキストがクリックされた時、クリックされた要素の文字の色を変更する</p>
+
+    <br>
+
+    <p id="q6-text">Click Me!!!</p>
+  </div>
+
+  <div>
+    <p>Q7</p>
+    <p>以下のテキストがマウスオーバーされた時、 <br>
+      マウスオーバーされた要素の背景色と文字色を変更する
+    </p>
+
+    <br>
+
+    <p id="q7-text">Mouse Over Me!!!</p>
+  </div>
+
+  <div>
+    <p>Q8</p>
+    <p>
+      以下のテキストがマウスオーバーされた時、 <br>
+      マウスオーバーされた要素の背景色を変更する。 <br>
+      またマウスが外れた時、背景色を元に戻す
+    </p>
+
+    <br>
+
+    <p id="q8-text">Mouse Over Me!!!</p>
+  </div>
+
+  <div>
+    <p>Q9</p>
+    <p>
+      Checkボタンがクリックされた時、<br>
+      入力された名前をpタグに表示してください
+    </p>
+
+    <br>
+    <labe>名前</labe>
+    <input type="text" id="q9-input">
+    <button id="q9-btn">Check</button>
+
+    <p id="q9-result"></p>
+  </div>
+
+  <div>
+    <p>Q10</p>
+    <p>
+      Checkボタンがクリックされた時、<br>
+      入力された年齢をpタグに表示してください <br>
+      ただし、年齢が20未満の場合には、<br>
+      「20歳未満の方の利用は禁止です。」と表示してください。
+    </p>
+
+    <br>
+    <labe>年齢</labe>
+    <input type="number" id="q10-input">
+    <button class="q10-btn">Check</button>
+
+    <p id="q10-result"></p>
+  </div>
+
+  <div>
+    <p>Q11</p>
+    <p>
+      Checkボタンがクリックされた時、<br>
+      入力された名前と年齢をpタグに表示してください。<br>
+      ただし、年齢が20未満の場合には、<br>
+      「20歳未満の方の利用は禁止です。」、<br>
+      名前が空欄の場合には、<br>
+      「名前が空欄です」と <span style="color:red">赤文字で</span> 表示してください。<br>
+    </p>
+    <br>
+
+    <labe>名前</labe>
+    <input type="text" id="q11-input-name" name="username">
+    <br>
+
+    <labe>年齢</labe>
+    <input type="number" id="q11-input-age" name="age">
+    <br>
+
+    <button class="q11-btn">Check</button>
+
+    <p id="q11-result-name"></p>
+    <p id="q11-result-age"></p>
+  </div>
+
+  <div>
+    <p>Q12</p>
+    <p>
+      ボタンがクリックされたときに、<br>
+      押されたボタンと同じテキストを持つ、<br>
+      pタグを作成して画面に表示する
+    </p>
+    <br>
+    <button class="q12-btn">Google</button>
+
+    <div class="q12-result"></div>
+  </div>
+
+  <div>
+    <p>Q13</p>
+    <p>
+      「追加」をクリックしたときに<br>
+      「リンゴ」をリストの先頭に追加してください
+    </p>
+    <br>
+    <button class="q13-btn">追加</button>
+    <ul id="q13-box">
+      <li>メロン</li>
+      <li>みかん</li>
+    </ul>
+  </div>
+
+  <div>
+    <p>Q14</p>
+    <p>
+      削除ボタンがクリックされたときに、<br>
+      「ニワトリ」をリストから削除してください
+    </p>
+
+    <br>
+    <button class="q14-btn">削除</button>
+    <ul>
+      <li id="swallow">ツバメ</li>
+      <li id="crow">カラス</li>
+      <li id="chicken">ニワトリ</li>
+    </ul>
+  </div>
+
+  <div>
+    <p>Q15</p>
+    <p>
+      以下のボタンがクリックされたとき、<br>
+      それぞれのテキストに合うリンクを作成する。<br>
+      Google: https://google.com <br>
+      Youtube: https://youtube.com <br>
+      Amazon: https://amazon.com
+    </p>
+    <p>
+      例 Googleの場合 <br>
+      '&lt;a href="https://google.com"&gt;google&lt;a&gt;'
+    </p>
+
+    <br>
+
+    <button class="q15-btn">Google</button>
+    <button class="q15-btn">YouTube</button>
+    <button class="q15-btn">Amazon</button>
+
+    <br>
+    <div class="q15-link-list">
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <!-- <script src="answer.js"></script> -->
+</body>
+
+</html>
