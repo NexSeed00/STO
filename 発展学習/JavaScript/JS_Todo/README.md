@@ -12,7 +12,7 @@ DOMの操作を用いたシンプルなTodoアプリの作成をします。
 
 ## 作成の手順
 
-* zipファイルのダウンロード ([クリックでDL開始]('http:'))
+* zipファイルのダウンロード ([クリックでDL開始](https://github.com/NexSeed00/STO/blob/master/%E7%99%BA%E5%B1%95%E5%AD%A6%E7%BF%92/JavaScript/JS_Todo/js_todo.zip?raw=true))
 * HTML、CSSは用意されているので、main.jsを編集します。
 
 1. ボタン要素を取得
