@@ -277,8 +277,8 @@ published_atについては次のカリキュラムで触れていくので今�
 - `localhost:8000/tweets`のページに「ツイートする」ボタンを作成し、`localhost:8000/tweets/create`にアクセスできるようにしてください。
 
 <h2 style="color: orange;">まとめ</h2>
-<strong>
+
 - Routingの設定方法
 - POST送信し、DBに値が保存できた
 - CSRF(クロス・サイト・リクエスト・フォージェリ)
-</strong>
+
