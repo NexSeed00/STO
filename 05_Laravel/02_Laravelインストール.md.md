@@ -103,15 +103,15 @@ composer create-project laravel/laravel --prefer-dist プロジェクト名 5.1
 
 <br>
 
-NexSeedのカリキュラムでは、**Version5.1**を使用して進めていきますので、下記のコマンドを**htdocs直下に**打ち込んでください。<br>
+下記のコマンドを**htdocs直下に**打ち込んでください。<br>
 <br>
 
 ```
-composer create-project laravel/laravel --prefer-dist Learn_SNS 5.1
+composer create-project laravel/laravel --prefer-dist Learn_SNS 
 ```
 
 <br>
-プロジェクト名は**「Learn_SNS」**、Versionは**5.1**です。
+プロジェクト名は**「Learn_SNS」**、です。
 
 
 #### ②プロジェクトが作れているか確認する。
