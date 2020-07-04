@@ -7,7 +7,7 @@
 > 今現在、世界中で最も使われているフレームワークと言われている。<br>WEBアプリケーションを簡単に、且つ自動で生成することができるMVCフレームワーク。<br>
 
 
-<a href="http://hackers.nexseed.net/curriculums/84">MVCとは</a>
+<a href="https://github.com/NexSeed00/STO/blob/master/05_Laravel/MVC%E3%81%A8%E3%81%AF.md">MVCとは</a>
 <br><br>
 <img src="http://hackers.nexseed.net/images/curriculum_images/laravel_image.png" style="width: 100%"><br>
 
