@@ -2,6 +2,7 @@
 このカリキュラムでは、Eloquentについて学んでいきます。
 
 <h2 style="color: #00CCFF;">このカリキュラムで学ぶこと</h2>
+
 - Eloquentとは
 - Eloquentの使い方
 
