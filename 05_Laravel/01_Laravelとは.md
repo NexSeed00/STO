@@ -5,7 +5,7 @@
 
 ### Laravelとは
 > 今現在、世界中で最も使われているフレームワークと言われている。<br>WEBアプリケーションを簡単に、且つ自動で生成することができるMVCフレームワーク。<br>
-現在最新のVersionは<span style="color: red;">5.6</span>となっている。(2018/04/17現在)
+
 
 <a href="http://hackers.nexseed.net/curriculums/84">MVCとは</a>
 <br><br>
