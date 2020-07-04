@@ -235,7 +235,7 @@ php -S localhost:8000 -t public
 ```
 
 <br>
-wwwブラウザで<a href="http://localhost:8000">localhost:8000 </a>にアクセスし、**Laravel 5** と大きなロゴが表示されれば成功です。<br>
+wwwブラウザで<a href="http://localhost:8000">localhost:8000 </a>にアクセスし、**Laravel ** と大きなロゴが表示されれば成功です。<br>
 <br>
 <img src="http://hackers.nexseed.net/images/curriculum_images/open_laravel.png" style="width: 100%"><br>
 <br>
