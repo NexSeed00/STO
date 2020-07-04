@@ -157,6 +157,7 @@ composer dump-autoload
 
 
 <h2 style="color: orange;">まとめ</h2>
+
 - helper関数の使い方
 - `composer dump-autoload`の使い方
 - composer.jsonへの書き方、反映方法
