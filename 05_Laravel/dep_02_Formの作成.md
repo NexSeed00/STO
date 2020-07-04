@@ -274,6 +274,7 @@ published_at以外しっかり保存されていることがわかります。<b
 published_atについては次のカリキュラムで触れていくので今は置いておきましょう。<br>
 
 <h2 style="color: #33CC00;">やってみよう！</h2>
+
 - `localhost:8000/tweets`のページに「ツイートする」ボタンを作成し、`localhost:8000/tweets/create`にアクセスできるようにしてください。
 
 <h2 style="color: orange;">まとめ</h2>
