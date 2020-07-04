@@ -25,7 +25,7 @@ DB接続用に○○、ログ出力用に△△等々、さまざまなライブ
 Laravel ではパッケージ（ライブラリ）の依存関係の管理に composer を使用しています。<br>
 そのためLaravel を動かすコンピュータには composer をインストールする必要があります。<br>
 
-#### ①Macの方はiterm(Terminalでも可)、Windowsの方はTera Termを開いてください。
+#### ①Macの方はTerminal、Windowsの方はTera Termを開いてください。
 
 #### ②ComposerのWebページからCUIを通してインストールする。
 
