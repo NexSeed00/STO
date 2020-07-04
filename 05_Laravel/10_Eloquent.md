@@ -86,6 +86,7 @@ View直下に**Tweets**ディレクトリを作成し、その中に**index.blad
 
 <h2 style="color: #00FF00;">① all()</h2>
 ### **例**
+
 **app/Http/Controllers/TweetsController.php**
 
 ```
@@ -125,7 +126,9 @@ class TweetsController extends Controller
 
 <br>
 ### **解説**
+
 ①まず始めに使用するモデルを記述する必要があるため、classの上の部分にモデル名を記述します。(①の追加部分)<br>
+
 <br>
 
 ```
@@ -142,6 +145,7 @@ SQL文でTweet:all()を書くと`SELECT * FROM tweets` となります。<br>
 
 <h2 style="color: #00FF00;">② find()</h2>
 ### **例**
+
 **app/Http/Controllers/TweetsController.php**
 
 ```
