@@ -22,7 +22,7 @@
 <br>
 <!-- 本番URL -->
 <!-- <a href="http://hackers.nexseed.net/curriculums/82">フレームワーク概論</a> -->
-フレームワークについての詳しい情報は<a href="http://lms.com/curriculums/82">フレームワーク概論</a>に記載してありますので読んでおきましょう。<br>
+フレームワークについての詳しい情報は<a href="https://github.com/NexSeed00/STO/blob/master/05_Laravel/%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF%E6%A6%82%E8%AB%96.md">フレームワーク概論</a>に記載してありますので読んでおきましょう。<br>
 
 <br>
 チームで開発することが多いWEBアプリケーション。<br>
