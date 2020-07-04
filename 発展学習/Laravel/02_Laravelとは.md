@@ -64,6 +64,7 @@ Composerはここからライブラリなどをインストールします。
 インストールは非常に簡単で以下の手順を順番に実施するだけで自分のPCにインストールできます。  
 1. Composerのインストール  
 Macの方は以下のコマンドでインストールできます。
+
 `sudo curl -sS https://getcomposer.org/installer | php`
 
 Windowsの方は[公式サイト](https://getcomposer.org/)から  
@@ -73,4 +74,4 @@ Windowsの方は[公式サイト](https://getcomposer.org/)から
 `mv composer.phar /usr/local/bin/composer`
 
 3. Comopserコマンドが使用できるか確認する  
-`composer`
+`composer -v`
