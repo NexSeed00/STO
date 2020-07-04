@@ -20,8 +20,10 @@ Route::get('tweets/{id}', 'TweetsController@show'); // 追加①
 ```
 
 <br>
+
 ### 解説
 ①つまりlocalhost:8000/tweets/{id} ←このようになります。<br>
+
 **{id}** とは、showメソッドに対してidパラメータ引き渡すことを意味しています。<br>
 
 次はControllerに処理を書いていきます。<br>
@@ -61,16 +63,21 @@ class TweetsController extends Controller
 ```
 
 <br>
+
 ### 解説
 ①show()メソッド内にパラメータで送られた$idを入れる。<br>
+
 ②**findOrFail()メソッド**を使用して$idのidを持ったデータを取得する。<br>
+
 <span style="color: red;">idに該当するデータがない場合はエラーを返す。</span>**ここがfind()メソッドとの違いです。**<br>
+
 ③view関数とcompact関数を使用してshow.blade.phpに$tweet飛ばしている。
 
 <br>
 最後にViewに処理を書いていきます。<br>
 
 <h2 style="color: orange;">View</h2>
+
 既存である**index.blade.php**と新しく**show.blade.php**作成し、Controllerから受け取っている値を表示しましょう。<br>
 <br>
 
