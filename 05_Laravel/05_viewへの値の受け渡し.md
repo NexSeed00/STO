@@ -2,6 +2,7 @@
 作成したViewにControllerを使用して値を受け渡しそう！
 
 <h2 style="color: #00CCFF;">このカリキュラムで学ぶこと</h2>
+
 - about.blade.phpへControllerを通して自分の名前を表示
 
 <h2 style="color: orange;">Controllerの設定</h2>
