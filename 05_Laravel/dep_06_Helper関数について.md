@@ -1,5 +1,7 @@
 <h2 style="color: orange;">Helper関数とは</h2>
-Laravelには、`ヘルパー関数（Helper Functions）`という、便利なグローバル関数が複数定義されています。<br>
+Laravelには、
+`ヘルパー関数（Helper Functions）`
+という、便利なグローバル関数が複数定義されています。<br>
 
 この**ヘルパー関数**の多くはフレームワーク自体で使用されていますが、ユーザーがアプリケーションに含むこともでき、自由に使用できることも特徴の一つです。<br>
 今回はヘルパー関数の作成も行いながら、ツイートの削除機能を追加していきます。<br>
@@ -96,6 +98,7 @@ function delete_form($urlParams, $label = '削除')
 ```
 
 <br>
+
 ### Autoload設定
 helper.phpを作成後、そのファイルを読み込ませるために`composer.json`というファイルを使用して自動ロードされるようにしていきます。<br>
 <br>
