@@ -15,7 +15,7 @@ PHPの**compact関数**を使って、下記のように書きます。compact�
 
 <?php
 
-namespace AppHttpControllers;
+namespace App\Http\Controllers;
 
 // ...
 
