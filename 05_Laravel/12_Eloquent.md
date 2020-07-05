@@ -17,16 +17,16 @@ Eloquentとはデータベースとモデルを対応づける機能です。**�
 <h2 style="color: orange;">準備</h2>
 これから実際にEloquentを使用する前に準備をしましょう。<br>
 
-1. routingの処理をroutes.phpへ記入
+1. routingの処理をroutes/web.phpへ記入
 2. TweetsControllerの作成
 3. 値を確認するためのViewの作成
 
 ### 1.routingの処理をroutes.phpへ記入
 route.phpに "localhost:8000/tweets"とアクセスした場合のroutingを書きましょう。<br>
-routes.phpに下記の記述を追加してください。
+routes/web.phpに下記の記述を追加してください。
 
 ```
-// routes.php
+// web.php
 
 <?php
 ・・・
@@ -36,7 +36,7 @@ Route::get('tweets', 'TweetsController@index'); // 追加
 
 ### 2.TweetsControllerの作成
 実際にEloquentを操作するControllerを作成しましょう。<br>
-Controllerの作成方法は<a href="http://hackers.nexseed.net/curriculums/149">こちら</a><br>
+Controllerの作成方法は<a href="https://github.com/NexSeed00/STO/blob/master/05_Laravel/05_Controller%E3%81%AE%E4%BD%9C%E6%88%90.md">こちら</a><br>
 作成後に下記の記述を**TweetsController.php**に追加してください。<br>
 
 ```
