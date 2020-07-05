@@ -32,9 +32,9 @@ php artisan make:controller PagesController
 
 <br>
 
-前回<a href="http://hackers.nexseed.net/curriculums/147">ページの表示フロー</a>のカリキュラム内で<br>
-Controllerを作成した時は上のコマンドのController名の前に **-- plain** がついていました。<br>
-が、今回 -- plain なしでartisanコマンドを入力してみました。どうなっているかControllerを確認してみましょう。<br>
+前回のページの表示フロー</a>のカリキュラム内で<br>
+Controllerを作成した時と同様のコマンドです<br>
+どうなっているかControllerを確認してみましょう。<br>
 <br>
 
 ```
