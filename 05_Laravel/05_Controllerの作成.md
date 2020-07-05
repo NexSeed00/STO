@@ -2,6 +2,7 @@
 前のカリキュラムではViewを作成しました。今回はControllerを作成したいと思います。
 
 <h2 style="color: #00CCFF;">このカリキュラムで学ぶこと</h2>
+
 - PagesControllerの作成(CUI操作)
 - plain以外のControllerの作り方
 
