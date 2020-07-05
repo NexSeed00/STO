@@ -48,7 +48,7 @@ layout.blade.phpを使用するためにresouces/views/pages/about.blade.phpを�
 </head>
 <body>
 	<h1>About this page</h1>
-	<h1>{{ $first_name }}・{{ $family_name }}</h1>
+	<h1>{{ $first_name }}・{{ $last_name }}</h1>
 </body>
 </html>
 ```
