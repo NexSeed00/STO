@@ -233,7 +233,7 @@ php -S localhost:8000 -t public
 <h2 style="color: orange;">まとめ</h2>
 
 - Controller作成のパターン
-	- --plain付きかなしか
+	- --resource付きかなしか
 - Controller内のデフォルトメソッド
 	- CRUD処理
 - View関数の使い方
