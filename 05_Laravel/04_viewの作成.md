@@ -9,10 +9,10 @@
 - returnでViewへ値を送る方法
 
 <h2 style="color: orange;">Routingの設定</h2>
-Learn_SNSのapp/Http/routes.phpにcontactへのGETアクセスの設定を追加します。<br><br>
+Learn_SNSのroutes/web.phpにcontactへのGETアクセスの設定を追加します。<br><br>
 
 ```
-// app/Http/routes.php
+// routes/web.php
 
 Route::get('/', 'WelcomeController@index');
 Route::get('contact', 'WelcomeController@contact');   // 追加
