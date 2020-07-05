@@ -2,7 +2,7 @@
 <img src="http://hackers.nexseed.net/images/curriculum_images/mvc_1.png" style="width: 80%;"><br>
 <br>
 今までControllerからViewに表示する流れ、モデルを作成し、php artisan tinkerコマンドを使ってモデルを操作し、DBに追加・削除などをしてきました。<br>
-このカリキュラムは本格的に<a href="http://hackers.nexseed.net/curriculums/84">MVCモデル</a>を使用していきます。<br>
+このカリキュラムは本格的に<a href="https://github.com/NexSeed00/STO/blob/master/05_Laravel/MVC%E3%81%A8%E3%81%AF.md">MVCモデル</a>を使用していきます。<br>
 
 <h2 style="color: #00CCFF;">このカリキュラムで学ぶこと</h2>
 
