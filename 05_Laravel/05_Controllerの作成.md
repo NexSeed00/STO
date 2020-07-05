@@ -27,13 +27,14 @@ Route::get('about', 'PagesController@about');    // 追加
 <br>
 
 ```
-php artisan make:controller PagesController
+php artisan make:controller PagesController　--resource
 ```
 
 <br>
 
 前回のページの表示フロー</a>のカリキュラム内で<br>
 Controllerを作成した時と同様のコマンドです<br>
+今回はオプションで追加があります。
 どうなっているかControllerを確認してみましょう。<br>
 <br>
 
@@ -132,8 +133,8 @@ class PagesController extends Controller
 <br>
 
 プレーンの時は中身が空でしたが、今回は色んなメソッドが自動で作成されています。<br>
-なんと -- plain なしでartisanコマンドを入力すると**CRUD処理のメソッドを含めた状態のControllerが自動で生成される**のです。<br>
-中にデフォルトでメソッドが入っていないControllerが欲しい場合は --plain をコントローラー名の前に半角スペース空けてつけてあげましょう。<br>
+なんと -- resource なしでartisanコマンドを入力すると**CRUD処理のメソッドを含めた状態のControllerが自動で生成される**のです。<br>
+中にデフォルトでメソッドが入っていないControllerが欲しい場合は --resource をコントローラー名の前に半角スペース空けてつけてあげましょう。<br>
 次はController内にあるメソッドの役割について説明します。<br>
 
 <h2 style="color: orange;">Controller内のメソッドについて</h2>
