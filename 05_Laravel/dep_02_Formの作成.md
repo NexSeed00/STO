@@ -13,7 +13,7 @@
 下記をroutes.phpに追加し、ツイート投稿画面を作成します。<br>
 
 ```
-// app/Http/routes.php
+// routes/web.php
 
 <?php
 
