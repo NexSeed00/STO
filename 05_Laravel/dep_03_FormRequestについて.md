@@ -129,9 +129,11 @@ artisanコマンドを使用して、Tweet用のFormRequestを生成します。
 ```
 php artisan make:request TweetRequest
 ```
+
 <br>
 実行すると<br>
 <br>
+
 ```
 
 // app/Http/Requests/TweetRequest.php
