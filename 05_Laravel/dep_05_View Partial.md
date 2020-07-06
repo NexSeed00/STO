@@ -232,6 +232,7 @@ inputタグのpublished_atの初期値は、`$publishd_at`変数が渡される�
 これでformのpartial化ができました。partial化と言っていますが、今までやってきたDB接続用の別ファイルを作り、require関数で読み込んでいることと何ら変わりないのです。<br>
 
 <h2 style="color: #33CC00;">やってみよう！</h2>
+
 - create.blade.phpもedit.blade.phpと同様に、partialを使うように修正してみてください。
 - index.blade.phpにツイートをつぶやけるボタンとタイトルをクリックして詳細に飛べるような処理を書いてください。
 
