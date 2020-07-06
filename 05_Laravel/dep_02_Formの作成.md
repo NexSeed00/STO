@@ -130,7 +130,7 @@ Viewでフォームを確認します。<br>
 routes.phpに新しくPOST送信用のRoutingを追加します。<br>
 <br>
 ```
-// app/Http/routes.php
+// routes/web.php
 
 <?php
 
