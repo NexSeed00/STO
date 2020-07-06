@@ -103,6 +103,7 @@ updateメソッド内では$idに対応する記事を取得し、入力デー�
 WWWブラウザではmethodはGETとPOSTにしか対応していないため、Laravelではhiddenを使って、`method="PATCH"`をエミュレートしています。<br>
 現在のControllerの記述のままリクエストが行われるとツイート詳細画面に移動するので少しだけshow.blade.phpを整えたいと思います。<br>
 <br>
+
 ```
 // resources/views/tweets/show.blade.php
 
@@ -122,6 +123,7 @@ WWWブラウザではmethodはGETとPOSTにしか対応していないため、L
 ```
 
 <h2 style="color: orange;">View Partial</h2>
+
 記事の編集機能は実装できましたが、新規記事作成フォームと、記事編集フォームで同じコードが重複しているで、Viewの Partial機能を使ってリファクタリングしてみます。<br>
 まず、一つ目はエラー表示のPartial化をしていくため、`form_errors.blade.php`を作成します。<br>
 <br>
