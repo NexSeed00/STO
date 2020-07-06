@@ -243,7 +243,7 @@ Laravelでは、**<span style="color: red;">クロス・サイト・リクエス
         <h1>ツイートを投稿</h1>
         <div class="col-md-6">
             <form action="" method="POST">
-            {{ csrf_field }} // 追加
+            {{ csrf_field() }} // 追加
                 <div class="form-group">
                     <label for="title">Tweet</label>
                     <input type="text" name="title" class="form-control">
