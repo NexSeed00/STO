@@ -11,7 +11,7 @@
 まずは、Routingから。新しくRouteを追加します。<br>
 
 ```
-// app/Http/routes.php
+// routes/web.php
 
 Route::get('tweets/{id}/edit', 'TweetsController@edit');  // 追加
 Route::patch('tweets/{id}', 'TweetsController@update');  // 追加
