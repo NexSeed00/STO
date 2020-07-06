@@ -35,7 +35,7 @@ layout.blade.phpにasset関数を使用し、cssとjsを読み込んでみまし
     <meta charset="UTF-8">
     <title>Learn_SNS</title>
     {{-- Boostrap導入 --}}
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"> // 追加
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> // 追加
 </head>
 <body>
     @yield('content')
