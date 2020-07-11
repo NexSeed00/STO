@@ -1,10 +1,9 @@
 <h2 style="color: orange;">スクラム開発とは</h2>
 まず始めにチーム開発で使用する開発手法についてスライドを使用して解説していきます。<br>
 <br>
-開発工程
 
 pdfをダウンロード
-()
+- [開発工程](https://github.com/NexSeed00/STO/blob/master/03_PHP_OOP/OOP/%E9%96%8B%E7%99%BA%E5%B7%A5%E7%A8%8B.pdf.zip?raw=true)
 
 チーム開発では最後のスライドで説明しているアジャイル開発の中の**スクラム**という手法を元に開発を進めます<br>
 
