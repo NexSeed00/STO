@@ -3,7 +3,8 @@
 <br>
 開発工程
 
-(https://docs.google.com/presentation/d/e/2PACX-1vQLC58Jbp9oFqBiw9mvipdjkbKE9-KMENxgRhUPoHah5V3A8TwehLdqlen4epxPPC9N0R7hQTsq1VMY/embed?start=false&loop=false&delayms=3000)
+pdfをダウンロード
+()
 
 チーム開発では最後のスライドで説明しているアジャイル開発の中の**スクラム**という手法を元に開発を進めます<br>
 
