@@ -52,7 +52,10 @@
 - phpmyadminを立ち上げ、DB名:pure_php, utf8mb4 general ci でDBを作成しましょう。
 - phpmyadminでテーブルを作成しましょう。作成方法は以下の二通りあります。
   - エディタでダウンロードしたフォルダを開き、todo.sqlファイル内のコードを全てコピーし、phpmyadminのSQLタブに貼り付け、実行する方法
-  - phpmyadminのインポートタブからtodo.sqlファイルを選択し、実行をする方法
+  - phpmyadminのインポートタブからtodo.sqlファイルを選択し、実行をする方法 
+- エディタでダウンロードしたフォルダを開きましょう。
+  - dbconnect.phpを開いてください。
+  - `$dbname = "todo";`を`$dbname = "pure_todo";`と書き換えましょう
 
 以上で準備は整いました。<br>
 上記にあるお手本と見比べながら、作成していきましょう。
