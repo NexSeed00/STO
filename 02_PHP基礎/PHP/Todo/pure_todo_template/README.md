@@ -55,7 +55,7 @@
   - phpmyadminのインポートタブからtodo.sqlファイルを選択し、実行をする方法 
 - エディタでダウンロードしたフォルダを開きましょう。
   - dbconnect.phpを開いてください。
-  - `$dbname = "todo";`を`$dbname = "pure_todo";`と書き換えましょう
+  - `$dbname = "todo";`を`$dbname = "pure_todo";`と書き換えましょう。
 
 以上で準備は整いました。<br>
 上記にあるお手本と見比べながら、作成していきましょう。
