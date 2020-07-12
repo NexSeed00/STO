@@ -60,4 +60,8 @@
 以上で準備は整いました。<br>
 上記にあるお手本と見比べながら、作成していきましょう。
 
+## To doアプリ作成手順書
+下記に作成の手順、ヒントを記載しています。是非、確認してみてください。
 
+- [こちら](https://github.com/NexSeed00/STO/blob/master/02_PHP%E5%9F%BA%E7%A4%8E/PHP/Todo/pure_todo_template/Todo_exp.pdf)を
+クリック
