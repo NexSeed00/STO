@@ -64,7 +64,7 @@
 ## To doアプリ作成手順書
 下記に作成の手順、ヒントを記載しています。是非、確認してみてください。
 
-- [こちら](https://github.com/NexSeed00/STO/blob/master/02_PHP%E5%9F%BA%E7%A4%8E/PHP/Todo/pure_todo_template/Todo_exp.pdf)を
+- [こちら](https://github.com/NexSeed00/STO/blob/master/02_PHP%E5%9F%BA%E7%A4%8E/PHP/Todo/Todo.pdf)を
 クリック
 
-- [ダウンロード](https://github.com/NexSeed00/STO/blob/master/02_PHP%E5%9F%BA%E7%A4%8E/PHP/Todo/pure_todo_template/Todo.pdf.zip?raw=true)
+- [ダウンロード](https://github.com/NexSeed00/STO/blob/master/02_PHP%E5%9F%BA%E7%A4%8E/PHP/Todo/Todo.pdf.zip?raw=true)
