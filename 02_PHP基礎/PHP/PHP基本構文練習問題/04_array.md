@@ -74,7 +74,7 @@ $animals[0] = "cat";
 <details><summary>回答例</summary><div>
 		
 ```
-unset($animals['3']);
+unset($animals['1']);
 var_dump($animals);
 ```
 		
