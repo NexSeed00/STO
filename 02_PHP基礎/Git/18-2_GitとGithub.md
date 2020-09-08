@@ -51,6 +51,4 @@ GitHubは、ソフトウェア開発プロジェクトのためのソースコ�
 お疲れ様でした！
 
 
-- [CUIでGitHubにファイルをプッシュする手順](https://github.com/NexSeed00/STO/blob/master/PHP%E5%9F%BA%E7%A4%8E/Git/22-2_CUI%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92push.md)
 
-- [GUIでGitHubにファイルをプッシュする手順](https://github.com/NexSeed00/STO/blob/master/PHP%E5%9F%BA%E7%A4%8E/Git/22-1_Sourcetree%E6%93%8D%E4%BD%9C.md)
