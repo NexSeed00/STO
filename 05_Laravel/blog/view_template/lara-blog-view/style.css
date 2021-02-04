@@ -1,0 +1,13 @@
+.nav-color{
+  background-color:rgb(62,45,34);
+}
+
+.btn-primary{
+  background-color:rgb(62,45,34);
+  border-color:rgb(62,45,34);
+}
+
+.btn-danger{
+  background-color: rgb(106,64,33);
+  border-color: rgb(106,64,33);
+}
