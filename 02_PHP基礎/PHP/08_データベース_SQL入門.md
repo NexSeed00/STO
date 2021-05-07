@@ -40,12 +40,12 @@ PHPでデータベースを使用する場合は、「データベースに接�
 
 |論理名|物理名|型|NULL|キー|その他|
 |:--|:--|:--|:--|:--|:--|
-|問い合わせコード|code|INT(10)|NO|PRI|auto_incriment|
+|問い合わせコード|id|INT(10)|NO|PRI|auto_incriment|
 |ニックネーム|nickname|VARCHAR(20)|NO|||
 |メールアドレス|email|VARCHAR(50)|NO|||
 |問い合わせ内容|content|VARCHAR(50)|NO|||
 
-* code
+* id
     * データの通し番号（CRUD処理の際、データの管理をしやすくするため）
 * VARCHAR
     * PHPのString型（文字列型）と同じ
@@ -145,38 +145,38 @@ WHERE email LIKE "%seed"
     * カラムの値が数値より大きいレコードを表示
 
 ```sql
-WHERE code > 3
+WHERE id > 3
 ```
 
 * **カラム名 < 数値**
     * カラムの値が数値より小さいレコードを表示
 
 ```sql
-WHERE code < 3
+WHERE id < 3
 ```
 
 * **カラム名 >= 数値**
     * カラムの値が数値以上のレコードを表示
 
 ```sql
-WHERE code >= 3
+WHERE id >= 3
 ```
 
 * **カラム名 <= 数値**
     * カラムの値が数値以下のレコードを表示
 
 ```sql
-WHERE code <= 3
+WHERE id <= 3
 ```
 
 ### UPDATE文
 次は、レコードの更新をしてみましょう。レコードを更新する場合は、**UPDATE**という命令を行います。
 
 ```sql
-UPDATE `survey` SET `email`="nexseed@mail.com", `content`="問い合わせ内容を更新" WHERE `code`=1;
+UPDATE `survey` SET `email`="nexseed@mail.com", `content`="問い合わせ内容を更新" WHERE `id`=1;
 ```
 
-上記UPDATE文を実行すると、codeが1のレコードで、emailとcontentの内容が更新されます。
+上記UPDATE文を実行すると、idが1のレコードで、emailとcontentの内容が更新されます。
 
 UPDATE文は、以下の書式で記述します。
 
@@ -190,10 +190,10 @@ UPDATE テーブル名 SET カラム名1="値1", カラム名2="値2", ... WHERE
 次は、レコードを削除してみましょう。レコードを削除する場合は、**DELETE**という命令を行います。
 
 ```sql
-DELETE FROM `survey` where `code`=1;
+DELETE FROM `survey` where `id`=1;
 ```
 
-上記DELETE文を実行すると、codeが1のレコードが削除されます。
+上記DELETE文を実行すると、idが1のレコードが削除されます。
 
 DELETE文は、以下の書式で記述します。
 
